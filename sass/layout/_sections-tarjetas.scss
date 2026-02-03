@@ -1,7 +1,48 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
-main{
-    background-color: $color-bg-body;
+.recomendacion-main,
+.populares-main{
+    max-width: 1400px;
+    margin: 0;
+    padding: 2rem 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2rem;
+    align-items: start;
     
+        &>div:first-child {
+        grid-column: 1 / -1;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba($color-text-gray, 0.2);
+            margin-bottom: 1rem;
+
+            .titulos-main {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                margin: 0;
+                border-left: 4px solid $color-primary; // La marca rosa
+                padding-left: 10px;
+                line-height: 1;
+            }
+
+            a {
+                color: $color-text-gray;
+                text-decoration: none;
+                font-size: 0.9rem;
+                transition: 0.3s;
+                font-weight: 600;
+
+                &:hover {
+                    color: $color-primary;
+                    transform: translateX(5px); // Pequeño movimiento a la derecha
+                }
+            }
+        }
+    }
 }

@@ -4,3 +4,33 @@
 .btn-primary {
     @include btn-style($color-primary, $color-text-white);
 }
+
+/* boton en el banner */
+
+.carousel-item {
+    position: relative; 
+
+    .cta-overlay {
+        position: absolute;
+        bottom: 1%; 
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        z-index: 10; 
+        
+        .btn-crear {
+            
+            @include btn-style($color-primary, $color-text-white);
+            
+            font-size: 1rem; 
+            padding: 10px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+            text-decoration: none; 
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
