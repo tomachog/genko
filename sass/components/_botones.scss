@@ -1,0 +1,6 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.btn-primary {
+    @include btn-style($color-primary, $color-text-white);
+}
