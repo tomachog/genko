@@ -194,6 +194,39 @@ figcaption:hover figure {
   object-position: center top;
 }
 
+.anuncios-main {
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  padding: 0 20px;
+}
+.anuncios-main .titulos-main {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #FF007F;
+  display: inline-block;
+}
+.anuncios-main .text-anuncios {
+  background-color: #23232D;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #FF007F;
+}
+.anuncios-main .text-anuncios h3 {
+  color: #FF007F;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.anuncios-main .text-anuncios h3:first-child {
+  margin-top: 0;
+}
+.anuncios-main .text-anuncios p {
+  color: #BDBDBD;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
 header .div-header .nav-header ul {
   list-style: none;
   margin: 0;
