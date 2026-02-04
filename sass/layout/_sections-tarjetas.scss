@@ -33,15 +33,16 @@
             }
 
             a {
-                color: $color-text-gray;
-                text-decoration: none;
-                font-size: 0.9rem;
-                transition: 0.3s;
-                font-weight: 600;
+                @include btn-style(transparent, $color-text-gray, 1px solid rgba($color-text-gray, 0.5));
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem; 
+                white-space: nowrap; 
+                flex-shrink: 0; 
 
                 &:hover {
-                    color: $color-primary;
-                    transform: translateX(5px); // Pequeño movimiento a la derecha
+                    color: $color-primary; 
+                    border-color: $color-primary; 
+                    background-color: rgba($color-primary, 0.1);
                 }
             }
         }
