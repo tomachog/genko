@@ -1,0 +1,288 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+@media (max-width: 768px) {
+
+    
+    html {
+        font-size: 14px; 
+    }
+    
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.5rem !important; }
+
+    @media (max-width: 768px) {
+
+    header .div-header {
+        flex-wrap: wrap !important; 
+        padding: 0.8rem 10px;
+        gap: 10px 0;
+
+        .img-header {
+            order: 1;
+            margin-right: auto; 
+            img { height: 26px; }
+        }
+
+        .botones-header {
+            order: 2;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            a {
+                font-size: 0.65rem !important;
+                padding: 4px 8px !important;
+                height: auto !important;
+                border-width: 1px !important;
+                white-space: nowrap;
+
+                &:nth-child(1) { margin: 0; }
+
+                &:nth-child(2) { 
+                    border: 1px solid rgba(255,255,255,0.3); 
+                }
+            }
+        }
+
+        .nav-header {
+            order: 3;
+            display: block !important; 
+            width: 100%; 
+            margin: 0 !important;
+            padding-top: 5px;
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch;
+
+            &::-webkit-scrollbar { display: none; }
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+
+            ul {
+                display: flex !important;
+                gap: 1.5rem !important;
+                padding: 0 5px !important;
+                margin: 0 !important;
+                justify-content: flex-start !important; 
+                width: max-content; 
+
+                li {
+                    display: block !important; 
+                    flex-shrink: 0; 
+                    
+                    a {
+                        font-size: 0.75rem;
+                        color: $color-text-gray;
+                        padding: 8px 0;
+                        display: block;
+
+                        &:hover {
+                            color: $color-text-white;
+                        }
+                    }
+                }
+            }
+        }
+
+        form { display: none; } 
+    }
+}
+
+
+    .carousel-item .cta-overlay {
+        bottom: 10%; 
+        .btn-crear {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    .recomendacion-main, 
+    .populares-main {
+        padding: 1rem 10px;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr); 
+
+        & > div:first-child div {
+            .titulos-main { font-size: 1.2rem; }
+            a { font-size: 0.7rem; padding: 0.3rem 0.8rem; }
+        }
+
+        .tarjeta-manga {
+            figcaption {
+                h3 { font-size: 0.9rem; } 
+                a { padding: 0.3rem 1rem; font-size: 0.7rem; }
+            }
+        }
+    }
+
+    .leer-main > div {
+        height: auto; 
+        display: flex;
+        flex-direction: column; 
+        padding: 0; 
+        background: #141414; 
+
+        
+        figure {
+            order: -1; 
+            position: relative; 
+            width: 100%;
+            height: 450px; 
+            margin: 0;
+            top: auto; right: auto; 
+            mask-image: none;
+            -webkit-mask-image: none;
+            background-color: #000; 
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; 
+                object-position: center;
+            }
+        }
+
+        h2.titulos-main {
+            position: relative; 
+            top: auto; left: auto;
+            margin: 1.5rem 1rem 0.5rem 1rem;
+            text-align: center; 
+            width: auto;
+            font-size: 2.5rem;
+        }
+
+        
+        a {
+            position: relative; 
+            top: auto; left: auto;
+            margin: 1rem auto 3rem auto;
+            display: inline-flex;
+            min-width: 200px;
+        }
+    }
+
+    .manga-card .contenido-manga {
+        padding: 2rem 0;
+        
+        .manga-portada {
+            max-width: 160px;
+            margin-bottom: 2rem;
+        }
+
+        .manga-info {
+            h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+            
+            .datos { font-size: 0.9rem; }
+            
+            .etiquetas .tags { 
+                padding: 4px 12px; 
+                font-size: 0.75rem; 
+            }
+
+            .sinopsis {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .lista-capitulos .contenedor-caps {
+        .caps {
+            grid-template-columns: 1fr;
+        }
+        
+        a {
+            padding: 0.8rem;
+            .num-cap { font-size: 1.4rem; margin-right: 1rem; }
+            .info-cap h4 { font-size: 0.9rem; }
+        }
+    }
+
+    .section-rank {
+        h2 { font-size: 2rem !important; }
+
+        .div-rank {
+            padding: 1rem;
+            flex-wrap: nowrap;
+            
+            .rank-numero {
+                font-size: 2.5rem; 
+                min-width: 40px;
+                margin-right: 0.8rem;
+            }
+
+            figure {
+                width: 70px; 
+                height: 100px;
+                margin-right: 1rem;
+            }
+
+            .detalles-rank {
+                h3 { font-size: 1rem; }
+                p { font-size: 0.8rem; }
+                a { font-size: 0.8rem; margin-top: 5px; }
+            }
+        }
+    }
+
+    .section-lector {
+        padding-bottom: 2rem;
+
+        h2 { font-size: 0.9rem; padding: 1rem 0; }
+
+        .lector-contenedor {
+            box-shadow: none;
+            
+            .navegacion {
+                padding: 1.5rem 10px;
+                
+                a {
+                    font-size: 0.75rem;
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+    }
+
+    .section-form {
+        padding: 0 10px;
+
+        .form-cuatro {
+            grid-template-columns: 1fr;
+        }
+        
+        label:has(input[type="checkbox"]), 
+        label:has(input[type="radio"]) {
+            gap: 1rem;
+            padding: 1rem;
+        }
+    }
+
+    .footer-genko {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+        padding: 3rem 20px;
+
+        .columna-footer {
+            align-items: center;
+            
+            h3::after {
+                margin: 5px auto 0 auto;
+            }
+
+            nav ul li a {
+                padding: 8px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    header .div-header .botones-header a:nth-child(2) {
+        display: none;
+    }
+}

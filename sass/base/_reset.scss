@@ -12,6 +12,11 @@ body {
     color: $color-text-white;
 }
 
+::selection{
+    color: $color-primary;
+    background-color: black;
+}
+
 button {
     border: none;
     background: none;

@@ -11,6 +11,11 @@ body {
   color: #FFFFFF;
 }
 
+::selection {
+  color: #FF007F;
+  background-color: black;
+}
+
 button {
   border: none;
   background: none;
@@ -1381,6 +1386,277 @@ main {
 .section-lector .lector-contenedor .navegacion a:last-child:hover::after {
   content: " →";
   margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  header .div-header {
+    flex-wrap: wrap !important;
+    padding: 0.8rem 10px;
+    gap: 10px 0;
+  }
+  header .div-header .img-header {
+    order: 1;
+    margin-right: auto;
+  }
+  header .div-header .img-header img {
+    height: 26px;
+  }
+  header .div-header .botones-header {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  header .div-header .botones-header a {
+    font-size: 0.65rem !important;
+    padding: 4px 8px !important;
+    height: auto !important;
+    border-width: 1px !important;
+    white-space: nowrap;
+  }
+  header .div-header .botones-header a:nth-child(1) {
+    margin: 0;
+  }
+  header .div-header .botones-header a:nth-child(2) {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  header .div-header .nav-header {
+    order: 3;
+    display: block !important;
+    width: 100%;
+    margin: 0 !important;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  header .div-header .nav-header::-webkit-scrollbar {
+    display: none;
+  }
+  header .div-header .nav-header {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  header .div-header .nav-header ul {
+    display: flex !important;
+    gap: 1.5rem !important;
+    padding: 0 5px !important;
+    margin: 0 !important;
+    justify-content: flex-start !important;
+    width: max-content;
+  }
+  header .div-header .nav-header ul li {
+    display: block !important;
+    flex-shrink: 0;
+  }
+  header .div-header .nav-header ul li a {
+    font-size: 0.75rem;
+    color: #BDBDBD;
+    padding: 8px 0;
+    display: block;
+  }
+  header .div-header .nav-header ul li a:hover {
+    color: #FFFFFF;
+  }
+  header .div-header form {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-item .cta-overlay {
+    bottom: 10%;
+  }
+  .carousel-item .cta-overlay .btn-crear {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .recomendacion-main,
+  .populares-main {
+    padding: 1rem 10px;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recomendacion-main > div:first-child div .titulos-main,
+  .populares-main > div:first-child div .titulos-main {
+    font-size: 1.2rem;
+  }
+  .recomendacion-main > div:first-child div a,
+  .populares-main > div:first-child div a {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .recomendacion-main .tarjeta-manga figcaption h3,
+  .populares-main .tarjeta-manga figcaption h3 {
+    font-size: 0.9rem;
+  }
+  .recomendacion-main .tarjeta-manga figcaption a,
+  .populares-main .tarjeta-manga figcaption a {
+    padding: 0.3rem 1rem;
+    font-size: 0.7rem;
+  }
+  .leer-main > div {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: #141414;
+  }
+  .leer-main > div figure {
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    top: auto;
+    right: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+    background-color: #000;
+  }
+  .leer-main > div figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .leer-main > div h2.titulos-main {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 1.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+    width: auto;
+    font-size: 2.5rem;
+  }
+  .leer-main > div a {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 1rem auto 3rem auto;
+    display: inline-flex;
+    min-width: 200px;
+  }
+  .manga-card .contenido-manga {
+    padding: 2rem 0;
+  }
+  .manga-card .contenido-manga .manga-portada {
+    max-width: 160px;
+    margin-bottom: 2rem;
+  }
+  .manga-card .contenido-manga .manga-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .manga-card .contenido-manga .manga-info .datos {
+    font-size: 0.9rem;
+  }
+  .manga-card .contenido-manga .manga-info .etiquetas .tags {
+    padding: 4px 12px;
+    font-size: 0.75rem;
+  }
+  .manga-card .contenido-manga .manga-info .sinopsis {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+  .lista-capitulos .contenedor-caps .caps {
+    grid-template-columns: 1fr;
+  }
+  .lista-capitulos .contenedor-caps a {
+    padding: 0.8rem;
+  }
+  .lista-capitulos .contenedor-caps a .num-cap {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+  }
+  .lista-capitulos .contenedor-caps a .info-cap h4 {
+    font-size: 0.9rem;
+  }
+  .section-rank h2 {
+    font-size: 2rem !important;
+  }
+  .section-rank .div-rank {
+    padding: 1rem;
+    flex-wrap: nowrap;
+  }
+  .section-rank .div-rank .rank-numero {
+    font-size: 2.5rem;
+    min-width: 40px;
+    margin-right: 0.8rem;
+  }
+  .section-rank .div-rank figure {
+    width: 70px;
+    height: 100px;
+    margin-right: 1rem;
+  }
+  .section-rank .div-rank .detalles-rank h3 {
+    font-size: 1rem;
+  }
+  .section-rank .div-rank .detalles-rank p {
+    font-size: 0.8rem;
+  }
+  .section-rank .div-rank .detalles-rank a {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  .section-lector {
+    padding-bottom: 2rem;
+  }
+  .section-lector h2 {
+    font-size: 0.9rem;
+    padding: 1rem 0;
+  }
+  .section-lector .lector-contenedor {
+    box-shadow: none;
+  }
+  .section-lector .lector-contenedor .navegacion {
+    padding: 1.5rem 10px;
+  }
+  .section-lector .lector-contenedor .navegacion a {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+  .section-form {
+    padding: 0 10px;
+  }
+  .section-form .form-cuatro {
+    grid-template-columns: 1fr;
+  }
+  .section-form label:has(input[type=checkbox]),
+  .section-form label:has(input[type=radio]) {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .footer-genko {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+    padding: 3rem 20px;
+  }
+  .footer-genko .columna-footer {
+    align-items: center;
+  }
+  .footer-genko .columna-footer h3::after {
+    margin: 5px auto 0 auto;
+  }
+  .footer-genko .columna-footer nav ul li a {
+    padding: 8px 0;
+  }
+}
+@media (max-width: 380px) {
+  header .div-header .botones-header a:nth-child(2) {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
