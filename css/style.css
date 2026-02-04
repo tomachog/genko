@@ -362,10 +362,11 @@ header .div-header .botones-header a:last-child:hover {
 .recomendacion-main,
 .populares-main {
   max-width: 1400px;
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-content: center;
   gap: 2rem;
   align-items: start;
 }
