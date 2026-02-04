@@ -1,0 +1,25 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+.section-rank{
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 20px;
+
+    h2{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: $color-text-white;
+        margin-bottom: 3rem;
+
+        &::after{
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: $color-primary;
+            margin: 10px auto;
+        }
+    }
+}
