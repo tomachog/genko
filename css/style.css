@@ -182,63 +182,79 @@ figcaption:hover figure {
 }
 .leer-main > div {
   position: relative;
-  background: rgb(20, 20, 20);
-  background: linear-gradient(90deg, rgb(20, 20, 20) 0%, rgb(35, 35, 45) 100%);
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   height: 400px;
+  background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 0, 127, 0.2);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 .leer-main > div h2.titulos-main {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 5%;
-  font-size: 3.5rem;
-  font-weight: 900;
   z-index: 10;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  font-size: 4rem;
+  font-weight: 900;
   margin: 0;
   color: #FFFFFF;
-  width: 45%;
-  line-height: 1.1;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+}
+.leer-main > div a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 0.5rem 1.2rem;
+  margin: 0;
+  background-color: #FF007F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.leer-main > div a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
 }
 .leer-main > div a {
   position: absolute;
-  bottom: 20%;
+  top: 55%;
   left: 5%;
   z-index: 10;
-  background-color: #FF007F;
-  color: #FFFFFF;
-  padding: 1rem 2.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 1.1rem;
   box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
-  transition: transform 0.2s;
-}
-.leer-main > div a:hover {
-  background-color: rgb(255, 25.5, 139.8);
-  transform: scale(1.05);
+  width: auto;
+  min-width: 150px;
 }
 .leer-main > div figure {
-  margin: 0;
-  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
   height: 100%;
-  position: relative;
-  mask-image: none;
-  -webkit-mask-image: none;
+  margin: 0;
+  z-index: 1;
+  mask-image: linear-gradient(to right, transparent 0%, black 20%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
 }
 .leer-main > div figure img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center right;
-  filter: drop-shadow(-10px 0 15px rgba(0, 0, 0, 0.5));
+  object-fit: cover;
+  object-position: top;
 }
 
 .div-rank {

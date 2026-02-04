@@ -80,73 +80,61 @@ figcaption {
     }
 }
 
-.leer-main{
+.leer-main {
     max-width: 1400px;
     margin: 4rem auto;
     padding: 0 20px;
-
-    & > div{
-        position: relative;
-        background: rgb(20, 20, 20);
-        background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(35,35,45,1) 100%);
+    
+    > div {
+        position: relative; 
+        height: 400px;      
+        background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);
         border-radius: 12px;
+        border: 1px solid rgba($color-primary, 0.2);
         overflow: hidden;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        border: 1px solid rgba(0,0,0,0.5);
-        box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        height: 400px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 
-        h2.titulos-main{
+        h2.titulos-main {
             position: absolute;
-            top: 50%;
-            left: 5%;
-            font-size: 3.5rem;
+            top: 30%;       
+            left: 5%;       
+            z-index: 10;    
+            font-size: 4rem;
             font-weight: 900;
-            z-index: 10;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
             margin: 0;
             color: $color-text-white;
-            width: 45%;
-            line-height: 1.1;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            line-height: 1;
         }
 
-        a{
+        a {
+            @include btn-style($color-primary, $color-text-white);
             position: absolute;
-            bottom: 20%;
-            left: 5%;
+            top: 55%;       
+            left: 5%;       
             z-index: 10;
-            background-color: $color-primary;
-            color: $color-text-white;
-            padding: 1rem 2.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
+            font-size: 1.1rem;
             box-shadow: 0 4px 15px rgba($color-primary, 0.4);
-            transition: transform 0.2s;
-
-            &:hover{
-                background-color: lighten($color-primary, 5%);
-                transform: scale(1.05);
-            }
+            width: auto;    
+            min-width: 150px; 
         }
 
-        figure{
-            margin: 0;
-            width: 50%;
+        figure {
+            position: absolute;
+            top: 0;
+            right: 0;       
+            width: 55%;    
             height: 100%;
-            position: relative;
-            mask-image: none;
-            -webkit-mask-image: none;
+            margin: 0;
+            z-index: 1;     
+            mask-image: linear-gradient(to right, transparent 0%, black 20%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
 
-            img{
+            img {
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
-                object-position: center right;
-                filter: drop-shadow(-10px 0 15px rgba(0,0,0,0.5));
+                object-fit: cover;   
+                object-position: top;   
             }
         }
     }
