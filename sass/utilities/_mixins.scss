@@ -53,3 +53,26 @@
         width: 250px;
     }
 }
+
+@mixin grid-responsive($cols: 4, $gap: 2rem) {
+    display: grid;
+    
+    grid-template-columns: repeat($cols, 1fr); 
+    gap: $gap;
+}
+
+
+@mixin link-footer-style {
+    text-decoration: none;
+    color: $color-text-gray; 
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block; 
+    padding: 4px 0;
+
+    &:hover {
+        color: $color-text-white; 
+        transform: translateX(5px); 
+    }
+}

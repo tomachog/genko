@@ -1,0 +1,101 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+.footer-genko {
+    background-color: #000000; 
+    border-top: 1px solid rgba($color-primary, 0.2); 
+    padding: 4rem 20px;
+    margin-top: 4rem; 
+    font-family: $font-stack;
+
+
+    
+    @include grid-responsive(4, 3rem); 
+    
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+    .columna-footer {
+        
+        
+        &.marca {
+            .logo-footer {
+                margin: 0 0 1.5rem 0;
+                img {
+                    width: 140px; 
+                    height: auto;
+                }
+            }
+
+            .redes-sociales {
+                ul {
+                    @extend %reset-list; 
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 0.5rem;
+
+                    li a {
+                        color: $color-text-white;
+                        font-weight: 700;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        transition: color 0.3s;
+                        letter-spacing: 1px;
+
+                        &:hover {
+                            color: $color-primary; 
+                        }
+                        
+                        i { margin-right: 8px; }
+                    }
+                }
+            }
+        }
+
+        
+        h3 {
+            color: $color-text-white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            
+            
+            &::after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color: $color-primary;
+                margin-top: 5px;
+            }
+        }
+
+        nav ul {
+            @extend %reset-list;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            li a {
+                
+                @include link-footer-style; 
+
+                
+                &.resaltado {
+                    color: $color-primary;
+                    font-weight: bold;
+                    
+                    &:hover {
+                        color: lighten($color-primary, 10%);
+                        text-shadow: 0 0 8px rgba($color-primary, 0.6);
+                    }
+                }
+            }
+        }
+    }
+}

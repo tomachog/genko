@@ -231,7 +231,7 @@ figcaption:hover figure {
   font-size: 0.95rem;
 }
 
-header .div-header .nav-header ul {
+.footer-genko .columna-footer.marca .redes-sociales ul, .footer-genko .columna-footer nav ul, header .div-header .nav-header ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -404,6 +404,88 @@ header .div-header .botones-header a:last-child:hover {
 .populares-main > div:first-child div a:hover {
   color: #FF007F;
   transform: translateX(5px);
+}
+
+.footer-genko {
+  background-color: #000000;
+  border-top: 1px solid rgba(255, 0, 127, 0.2);
+  padding: 4rem 20px;
+  margin-top: 4rem;
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-genko .columna-footer.marca .logo-footer {
+  margin: 0 0 1.5rem 0;
+}
+.footer-genko .columna-footer.marca .logo-footer img {
+  width: 140px;
+  height: auto;
+}
+.footer-genko .columna-footer.marca .redes-sociales ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-genko .columna-footer.marca .redes-sociales ul li a {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+  letter-spacing: 1px;
+}
+.footer-genko .columna-footer.marca .redes-sociales ul li a:hover {
+  color: #FF007F;
+}
+.footer-genko .columna-footer.marca .redes-sociales ul li a i {
+  margin-right: 8px;
+}
+.footer-genko .columna-footer h3 {
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.footer-genko .columna-footer h3::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #FF007F;
+  margin-top: 5px;
+}
+.footer-genko .columna-footer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-genko .columna-footer nav ul li a {
+  text-decoration: none;
+  color: #BDBDBD;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 4px 0;
+}
+.footer-genko .columna-footer nav ul li a:hover {
+  color: #FFFFFF;
+  transform: translateX(5px);
+}
+.footer-genko .columna-footer nav ul li a.resaltado {
+  color: #FF007F;
+  font-weight: bold;
+}
+.footer-genko .columna-footer nav ul li a.resaltado:hover {
+  color: rgb(255, 51, 152.6);
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
 }
 
 /*# sourceMappingURL=style.css.map */
