@@ -140,25 +140,57 @@ a {
 
 figcaption {
   padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 figcaption h3 {
   font-size: 1rem;
-  font-weight: 600px;
-  margin-bottom: 5px;
+  margin: 0;
+  color: #FFFFFF;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+figcaption a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 0.5rem 1.2rem;
+  margin: 0;
+  background-color: #FF007F;
   color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+figcaption a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
 }
 figcaption a {
   font-size: 0.8rem;
-  color: #FF007F;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  width: auto;
+  margin-top: 2px;
 }
 figcaption a:hover {
-  text-decoration: underline;
+  background-color: rgb(255, 25.5, 139.8);
+  box-shadow: 0 4px 10px rgba(255, 0, 127, 0.4);
 }
 figcaption:hover {
   transform: translateY(-10px);
