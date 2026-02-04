@@ -129,7 +129,7 @@
         border-radius: 4px;
         margin-right: 1rem;
         cursor: pointer;
-        transition: background 0.3s;
+
         
         &:hover {
             background-color: darken($color-primary, 10%);
@@ -151,3 +151,20 @@
     filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.5));
 }
 
+@mixin glass-dark{
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@mixin badge-style($bg-color: $color-primary){
+    background-color: $bg-color;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba($bg-color, 0.4);
+}

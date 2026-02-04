@@ -67,6 +67,20 @@ body {
   transform: scale(1.05);
 }
 
+.footer-genko .columna-footer.marca .redes-sociales ul, .footer-genko .columna-footer nav ul, header .div-header .nav-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .div-header .nav-header ul li a, header .div-header .botones-header a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
 .tarjeta-manga {
   background-color: transparent;
   transition: transform 0.3s ease, box-shadow 0.3 ease;
@@ -287,6 +301,39 @@ figcaption:hover figure {
   transform: scale(1.1);
 }
 
+.manga-portada {
+  position: relative;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.6);
+  aspect-ratio: 2/3;
+  transition: transform 0.3s ease;
+}
+.manga-portada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.manga-portada .estado-manga {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #FF007F;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(255, 0, 127, 0.4);
+  z-index: 2;
+}
+.manga-portada:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
 .anuncios-main {
   max-width: 1000px;
   margin: 0 auto 4rem auto;
@@ -404,7 +451,6 @@ label input[type=file]::file-selector-button {
   border-radius: 4px;
   margin-right: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
 }
 label input[type=file]::file-selector-button:hover {
   background-color: rgb(204, 0, 101.6);
@@ -556,20 +602,6 @@ input[type=submit]:hover {
 .div-rank:nth-of-type(3) .rank-numero {
   -webkit-text-stroke: 2px #cd7f32;
   color: transparent;
-}
-
-.footer-genko .columna-footer.marca .redes-sociales ul, .footer-genko .columna-footer nav ul, header .div-header .nav-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header .div-header .nav-header ul li a, header .div-header .botones-header a {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
 }
 
 header {
@@ -903,6 +935,78 @@ main > div h1::after {
   background-color: #FF007F;
   margin: 15px auto 0 auto;
   border-radius: 2px;
+}
+
+main {
+  background-color: #121212;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.manga-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.manga-info h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #fff, #999);
+  -webkit-text-fill-color: transparent;
+}
+.manga-info .datos {
+  color: #BDBDBD;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.manga-info .datos .rating {
+  color: #FFD700;
+  font-weight: bold;
+}
+.manga-info .datos .autor {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.manga-info .etiquetas {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.manga-info .etiquetas .tags {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #FF007F;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: default;
+}
+.manga-info .etiquetas .tags:hover {
+  background-color: rgba(255, 0, 127, 0.2);
+  border-color: #FF007F;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+.manga-info .sipnosis {
+  line-height: 1.8;
+  color: rgb(216.75, 216.75, 216.75);
+  font-size: 1rem;
+  max-width: 90%;
+  border-left: 4px solid #FF007F;
+  padding-left: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

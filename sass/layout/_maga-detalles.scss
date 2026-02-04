@@ -1,0 +1,79 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+main{
+    background-color: $color-bg-body;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.manga-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h1{
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 1rem;
+        color: $color-text-white;
+        text-transform: uppercase;
+        background: linear-gradient(to bottom, #fff, #999);
+        -webkit-text-fill-color: transparent;
+    }
+
+    .datos{
+        color: $color-text-gray;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        .rating{
+            color: $color-gold;
+            font-weight: bold;
+        }
+        .autor{
+            color: $color-text-white;
+            font-weight: 600;
+        }
+    }
+
+    .etiquetas{
+        display: flex;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+
+        .tags{
+            @include glass-dark;
+            color: $color-primary;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+            cursor: default;
+
+            &:hover{
+                background-color: rgba($color-primary, 0.2);
+                border-color: $color-primary;
+                box-shadow: 0 0 10px rgba($color-primary, 0.4);
+            }
+        }
+    }
+
+    .sipnosis{
+        line-height: 1.8;
+        color: darken($color-text-white, 15%);
+        font-size: 1rem;
+        max-width: 90%;
+        border-left: 4px solid $color-primary;
+        padding-left: 1.5rem;
+    }
+}
