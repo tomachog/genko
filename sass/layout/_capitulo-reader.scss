@@ -1,0 +1,72 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+main {
+    background-color: #121212; 
+}
+
+.section-lector {
+    padding-bottom: 5rem;
+    min-height: 100vh;
+
+    h2 {
+        text-align: center;
+        color: $color-text-gray;
+        font-family: $font-stack;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 2rem 0;
+        margin: 0;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-text-white;
+        }
+    }
+
+    .lector-contenedor {
+        @include reader-container-style;
+        figure {
+            @include seamless-image-stack;
+        }
+
+        .navegacion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 20px; 
+            background-color: #121212; 
+            margin-top: 5px; 
+
+            a {
+                font-family: $font-stack;
+                font-weight: 700;
+                text-transform: uppercase;
+                
+                &:first-child {
+                    @include btn-style(transparent, $color-text-gray, 1px solid $color-text-gray);
+                    
+                    &:hover {
+                        color: $color-text-white;
+                        border-color: $color-text-white;
+                    }
+                }
+
+                &:last-child {
+                    @include btn-style($color-primary, $color-text-white);
+                    box-shadow: 0 0 15px rgba($color-primary, 0.3);
+
+                    &:hover {
+                        &::after {
+                            content: ' →';
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

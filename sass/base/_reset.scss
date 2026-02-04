@@ -11,3 +11,15 @@ body {
     font-family: $font-stack;
     color: $color-text-white;
 }
+
+button {
+    border: none;
+    background: none;
+    font-family: inherit; 
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
