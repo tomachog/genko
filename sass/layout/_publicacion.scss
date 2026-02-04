@@ -1,0 +1,65 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+main{
+    & > div h1{
+        text-align: center;
+        font-size: 2.5rem;
+        color: $color-text-white;
+        margin: 3rem 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &::after{
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: $color-primary;
+            margin: 1rem auto;
+        }
+    }
+}
+
+.section-form{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h2{
+        font-size: 1.5rem;
+        color: $color-text-white;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+
+    h3{
+        font-size: 0.9rem;
+        color: $color-primary;
+        margin-top: 1rem;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .div-form{
+        @include form-card-style;
+    }
+
+    .form-cuatro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+    }
+}

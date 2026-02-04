@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -229,6 +230,223 @@ figcaption:hover figure {
   line-height: 1.6;
   margin-bottom: 1rem;
   font-size: 0.95rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #BDBDBD;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+label:hover {
+  color: #FFFFFF;
+}
+label input[type=text],
+label textarea,
+label select {
+  width: 100%;
+  background-color: #121212;
+  border: 1px solid #333;
+  color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+label input[type=text]::placeholder,
+label textarea::placeholder,
+label select::placeholder {
+  color: #8a8a8a;
+}
+label input[type=text]:focus,
+label textarea:focus,
+label select:focus {
+  border-color: #FF007F;
+  box-shadow: 0 0 8px rgba(255, 0, 127, 0.3);
+  background-color: rgb(30.5375, 30.5375, 39.2625);
+}
+label textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+label input[type=file] {
+  width: 100%;
+  background-color: #121212;
+  border: 1px solid #333;
+  color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+label input[type=file]::placeholder {
+  color: #8a8a8a;
+}
+label input[type=file]:focus {
+  border-color: #FF007F;
+  box-shadow: 0 0 8px rgba(255, 0, 127, 0.3);
+  background-color: rgb(30.5375, 30.5375, 39.2625);
+}
+label input[type=file] {
+  padding: 0.5rem;
+  background-color: #23232D;
+  border: 1px dashed #BDBDBD;
+  cursor: pointer;
+}
+label input[type=file]:hover {
+  border-color: #FF007F;
+  color: #FF007F;
+}
+label input[type=file]::file-selector-button {
+  background-color: #FF007F;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+label input[type=file]::file-selector-button:hover {
+  background-color: rgb(204, 0, 101.6);
+}
+label input[type=file] {
+  height: auto;
+}
+
+label:has(input[type=checkbox]),
+label:has(input[type=radio]) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+}
+label:has(input[type=checkbox]) input[type=checkbox],
+label:has(input[type=checkbox]) input[type=radio],
+label:has(input[type=radio]) input[type=checkbox],
+label:has(input[type=radio]) input[type=radio] {
+  accent-color: #FF007F;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+input[type=submit] {
+  background-color: #FF007F;
+  color: #FFFFFF;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+input[type=submit]:hover {
+  background-color: rgb(229.5, 0, 114.3);
+  box-shadow: 0 0 12px rgba(255, 0, 127, 0.5);
+}
+input[type=submit] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  border: none;
+  letter-spacing: 2px;
+}
+input[type=submit]:hover {
+  transform: scale(1.02);
+}
+
+.grupo-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(189, 189, 189, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+}
+.check-item span {
+  color: #BDBDBD;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: none;
+  transition: color 0.3s;
+}
+.check-item input[type=checkbox],
+.check-item input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #BDBDBD;
+  border-radius: 4px;
+  margin-right: 0.6rem;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.check-item input[type=checkbox]:checked,
+.check-item input[type=radio]:checked {
+  background-color: #FF007F;
+  border-color: #FF007F;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+.check-item input[type=checkbox]:checked::after,
+.check-item input[type=radio]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.check-item input[type=radio] {
+  border-radius: 50%;
+}
+.check-item input[type=radio]:checked::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+.check-item:hover span {
+  color: white;
+}
+.check-item:hover input {
+  border-color: #FF007F;
 }
 
 .footer-genko .columna-footer.marca .redes-sociales ul, .footer-genko .columna-footer nav ul, header .div-header .nav-header ul {
@@ -486,6 +704,65 @@ header .div-header .botones-header a:last-child:hover {
 .footer-genko .columna-footer nav ul li a.resaltado:hover {
   color: rgb(255, 51, 152.6);
   text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
+}
+
+main > div h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin: 3rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main > div h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #FF007F;
+  margin: 1rem auto;
+}
+
+.section-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section-form h2 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.section-form h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #FF007F;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.section-form h3 {
+  font-size: 0.9rem;
+  color: #FF007F;
+  margin-top: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.section-form .div-form {
+  background-color: rgb(30.75, 30.75, 30.75);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rbga(0, 0, 0, 0.3);
+}
+.section-form .form-cuatro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -76,3 +76,63 @@
         transform: translateX(5px); 
     }
 }
+
+@mixin form-card-style{
+    background-color: lighten($color-bg-body, 5%);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba($color-text-white, 0.05);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rbga(0,0,0,0.3);
+}
+
+@mixin input-genko{
+    width: 100%;
+    background-color: $color-bg-body;
+    border: 1px solid #333;
+    color: $color-text-white;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: $font-stack;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &::placeholder{
+        color: darken($color-text-gray, 20%);
+    }
+
+    &:focus{
+        border-color: $color-primary;
+        box-shadow: 0 0 8px rgba($color-primary, 0.3);
+        background-color: darken($color-bg-nav, 2%);
+    }
+}
+
+@mixin file-input-style {
+    padding: 0.5rem;
+    background-color: $color-bg-nav;
+    border: 1px dashed $color-text-gray;
+    cursor: pointer;
+    
+    &:hover {
+        border-color: $color-primary;
+        color: $color-primary;
+    }
+    
+    &::file-selector-button {
+        background-color: $color-primary;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+        
+        &:hover {
+            background-color: darken($color-primary, 10%);
+        }
+    }
+}
