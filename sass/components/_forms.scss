@@ -1,7 +1,7 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
-label{
+label {
     display: flex;
     flex-direction: column;
     font-size: 0.9rem;
@@ -12,7 +12,7 @@ label{
     cursor: pointer;
     transition: color 0.3s;
 
-    &:hover{
+    &:hover {
         color: $color-text-white;
     }
 
@@ -22,12 +22,12 @@ label{
         @include input-genko;
     }
 
-    textarea{
+    textarea {
         min-height: 120px;
         resize: vertical;
     }
 
-    input[type="file"]{
+    input[type="file"] {
         @include input-genko;
         @include file-input-style;
         height: auto;
@@ -35,27 +35,70 @@ label{
 }
 
 label:has(input[type="checkbox"]),
-label:has(input[type="radio"]){
+label:has(input[type="radio"]) {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     border-radius: 6px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     margin-top: 0.5rem;
+    padding: 10px;
 
     input[type="checkbox"],
-    input[type="radio"]{
-        accent-color: $color-primary;
+    input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
         width: 1.2rem;
         height: 1.2rem;
         margin-right: 0.5rem;
         cursor: pointer;
         margin-top: 0;
+        border: 2px solid $color-text-gray;
+        background-color: transparent;
+        position: relative;
+        transition: all 0.2s ease;
+
+        &:checked {
+            background-color: $color-primary;
+            border-color: $color-primary;
+            box-shadow: 0 0 10px rgba($color-primary, 0.4);
+        }
+
+        &:hover {
+            border-color: $color-primary;
+        }
+    }
+
+    input[type="checkbox"]:checked::after {
+        content: '✔';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    input[type="radio"] {
+        border-radius: 50%;
+
+        &:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+        }
     }
 }
 
-input[type="submit"]{
+input[type="submit"] {
     @include btn-style($color-primary, $color-text-white);
     width: 100%;
     padding: 1rem;
@@ -64,66 +107,62 @@ input[type="submit"]{
     border: none;
     letter-spacing: 2px;
 
-    &:hover{
+    &:hover {
         transform: scale(1.02);
     }
 }
 
 .grupo-opciones {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 1rem; 
-    background-color: rgba(0,0,0,0.2); 
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
     border-radius: 6px;
     border: 1px solid rgba($color-text-gray, 0.2);
     margin-bottom: 1.5rem;
 }
 
-
 .check-item {
-    display: flex; 
-    align-items: center; 
-    flex-direction: row; 
-    margin: 0; 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
     cursor: pointer;
-    user-select: none; 
-
+    user-select: none;
 
     span {
         color: $color-text-gray;
         font-weight: 500;
         font-size: 0.95rem;
-        text-transform: none; 
+        text-transform: none;
         transition: color 0.3s;
     }
 
-
     input[type="checkbox"],
     input[type="radio"] {
-        appearance: none; 
+        appearance: none;
         -webkit-appearance: none;
         width: 1.2rem;
         height: 1.2rem;
         border: 2px solid $color-text-gray;
-        border-radius: 4px; 
-        margin-right: 0.6rem; 
+        border-radius: 4px;
+        margin-right: 0.6rem;
         position: relative;
         cursor: pointer;
         background-color: transparent;
         transition: all 0.2s ease;
 
-        
         &:checked {
-            background-color: $color-primary; 
+            background-color: $color-primary;
             border-color: $color-primary;
-            box-shadow: 0 0 10px rgba($color-primary, 0.4); 
-            
-            
+            box-shadow: 0 0 10px rgba($color-primary, 0.4);
+
             &::after {
                 content: '✔';
                 position: absolute;
-                top: 50%; left: 50%;
+                top: 50%;
+                left: 50%;
                 transform: translate(-50%, -50%);
                 color: white;
                 font-size: 0.8rem;
@@ -132,12 +171,11 @@ input[type="submit"]{
         }
     }
 
-
     input[type="radio"] {
-        border-radius: 50%; 
+        border-radius: 50%;
 
         &:checked::after {
-            content: ''; 
+            content: '';
             width: 8px;
             height: 8px;
             background-color: white;
@@ -145,9 +183,13 @@ input[type="submit"]{
         }
     }
 
-
     &:hover {
-        span { color: white; }
-        input { border-color: $color-primary; }
+        span {
+            color: white;
+        }
+
+        input {
+            border-color: $color-primary;
+        }
     }
 }
