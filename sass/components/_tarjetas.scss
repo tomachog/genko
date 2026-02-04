@@ -242,10 +242,28 @@ figcaption {
     }
 }
 
+.manga-card{
+    position: relative;
+    padding: 4rem 20px;
+    background: radial-gradient(circle at top center, ($color-primary, 0.15), transparent 50%);
+
+    .contenido-manga{
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 .manga-portada{
     position: relative; 
     margin: 0;
     border-radius: 12px;
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 4rem;
     overflow: hidden; 
     box-shadow: -10px 10px 30px rgba(0,0,0,0.6); 
     aspect-ratio: 2/3; 
@@ -260,14 +278,68 @@ figcaption {
 
     .estado-manga {
         position: absolute;
-        top: 15px;
-        left: 15px;
+        top: 10px;
+        left: 50%;
         @include badge-style($color-primary); 
         z-index: 2;
+        transform: translateX(-50%);
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
     }
 
     &:hover {
-        transform: translateY(-5px) scale(1.02); // Efecto flotante
+        transform: translateY(-10px) scale(1.05); // Efecto flotante
     }
 }
 
+a{
+    @include glass-dark;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+
+    .num-cap{
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: rgba($color-text-white, 0.1);
+        margin-right: 1.5rem;
+        font-style: italic;
+        transition: 0.3s;
+    }
+
+    .info-cap{
+        flex-grow: 1;
+
+        h4{
+            margin: 0;
+            font-size: 1rem;
+            color: $color-text-white;
+            font-weight: 600;
+        }
+    }
+
+    &:hover{
+        transform: translateX(10px);
+        background-color: lighten($color-bg-body, 8%);
+        border-color: $color-primary;
+        box-shadow: 0 0 20px rgba($color-primary, 0.15);
+
+        .num-cap{
+            color: $color-primary;
+            transform: scale(1.1);
+        }
+
+        &::after{
+            content: '';
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,266,0-1), transparent);
+            transform: skewX(-20deg);
+        }
+    }
+}
