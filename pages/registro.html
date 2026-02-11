@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENKO|Iniciar Sesion</title>
+    <title>GENKO|Registrarse</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header>
-
         <div class="div-header">
-    
+
             <figure class="img-header">
                 <img src="../img/logos/logo-rosa.png" alt="logo rosa de genko">
             </figure>
-    
+
             <nav class="nav-header">
                 <ul>
                     <li><a href="../index.html">INICIO</a></li>
@@ -26,60 +27,64 @@
                     <li><a href="./rankings.html">RANKINGS</a></li>
                 </ul>
             </nav>
-    
+
             <form>
                 <input type="search" name="form_buscador" id="form_buscador" placeholder="Buscar">
             </form>
-    
+
             <div class="botones-header">
                 <a href="./publicar.html">publicar</a>
                 <a href="#">Iniciar sesion</a>
                 <a href="#">Registrarse</a>
             </div>
-    
+
         </div>
     </header>
 
     <main>
-        <section class="section-login">
-            <div class="div-login">
-                <div class="card-login">
-                    <h1>Bienvenidos</h1>
+        <section class="section-reg">
+            <div class="div-reg">
+                <h1>Crear Cuenta</h1>
+                <p>Únete a nuestra comunidad de lectores y
+                creadores.</p>
 
-                    <form>
-
-                        <div class="grupos-forms">
-                            <label for="email_form">Email
-                                <input type="email" name="email_form" id="email_form" placeholder="tu@email.com">
-                            </label>
-                        </div>
-
-                        <div class="grupos-forms">
-                            <label for="password_form">Contraseña
-                                <input type="password" name="password_form" id="password_form" placeholder="••••••••">
-                            </label>
-                        </div>
-
-                        <div class="grupos-forms">
-                            <label for="recordarme_form">
-                                <input type="checkbox" name="recordarme_form" id="recordarme_form">Recordarme
-                            </label>
-                            <a href="#">¿Olvidaste tu contraseña?</a>
-                        </div>
-
-                        <button type="submit">Iniciar Sesión</button>
-                    </form>
-
-                    <div class="social-login">
-                        <span>o continúa con</span>
-
-                        <button class="btn-social">Google</button>
+                <form>
+                    <div class="grupos-forms">
+                        <label for="nombre_form">Nombre de Usuario
+                            <input type="text" name="nombre_form" id="nombre_form" placeholder="Otakusupremo22">
+                        </label>
+                    </div>
+                    
+                    <div class="grupos-forms">
+                        <label for="password_form">Contraseña
+                            <input type="password" name="password_form" id="password_form" placeholder="••••••••">
+                        </label>
                     </div>
 
-                    <p>
-                        ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
-                    </p>
-                </div>
+                    <div class="grupos-forms">
+                        <label for="password_form">Confirmar Contraseña
+                            <input type="password" name="password_form" id="password_form" placeholder="••••••••">
+                        </label>
+                    </div>
+
+                    <div class="grupos-forms">
+                        <label for="email_form">Email
+                            <input type="email" name="email_form" id="email_form" placeholder="tu@email.com">
+                        </label>
+                    </div>
+
+                    <div class="grupos-forms">
+                        <label for="condi_form">
+                            <input type="checkbox" name="condi_form" id="condi_form">
+                            <span>Acepto los <a href="#">Términos y Condiciones</a>
+                            y la Política de Privacidad</span>
+                        </label>
+                    </div>
+
+                    <button type="submit">Registrarse</button>
+                </form>
+
+                <p>¿Ya tienes cuenta? <a href="./login.html">Inicia Sesión</a></p>
             </div>
         </section>
     </main>
@@ -97,7 +102,7 @@
                 </ul>
             </nav>
         </section>
-    
+
         <section class="columna-footer">
             <h3>EXPLORAR</h3>
             <nav>
@@ -110,7 +115,7 @@
                 </ul>
             </nav>
         </section>
-    
+
         <section class="columna-footer">
             <h3>RECURSOS</h3>
             <nav>
@@ -121,7 +126,7 @@
                 </ul>
             </nav>
         </section>
-    
+
         <section class="columna-footer">
             <h3>CUENTA</h3>
             <nav>
@@ -134,11 +139,12 @@
                 </ul>
             </nav>
         </section>
-    
+
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
