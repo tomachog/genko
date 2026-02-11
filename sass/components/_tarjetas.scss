@@ -363,18 +363,27 @@ a{
         letter-spacing: 1px;
     }
 
-    p{
+    > p:last-child {
+        margin-top: 2rem;       
+        text-align: center;     
+        width: 100%;            
+        background: transparent !important; 
+        border: none !important; 
+        
+        
         color: $color-text-gray;
-        font-size: 0.9rem;
-        margin-top: 1rem;
+        font-size: 0.95rem;
+        display: flex;         
+        justify-content: center; 
+        align-items: center;
+        gap: 8px;               
 
-        a{
+        a {
             color: $color-text-white;
             font-weight: 700;
             text-decoration: none;
-            margin-left: 5px;
-
-            &:hover{
+            
+            &:hover {
                 color: $color-primary;
                 text-decoration: underline;
             }

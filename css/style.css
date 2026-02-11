@@ -581,18 +581,25 @@ a:hover::after {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.card-login p {
+.card-login > p:last-child {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+  background: transparent !important;
+  border: none !important;
   color: #BDBDBD;
-  font-size: 0.9rem;
-  margin-top: 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
-.card-login p a {
+.card-login > p:last-child a {
   color: #FFFFFF;
   font-weight: 700;
   text-decoration: none;
-  margin-left: 5px;
 }
-.card-login p a:hover {
+.card-login > p:last-child a:hover {
   color: #FF007F;
   text-decoration: underline;
 }
@@ -1925,6 +1932,12 @@ main {
 .div-login {
   width: 100%;
   max-width: 420px;
+}
+
+.social-login {
+  margin: 3rem 0 2rem 0;
+  position: relative;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
