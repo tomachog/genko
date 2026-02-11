@@ -280,3 +280,16 @@
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .section-cate {
+        h1 { font-size: 2rem; }
+        p { font-size: 0.95rem; }
+    }
+    
+    // En móviles, hacemos la grilla un poco más chica
+    .div-cate {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important; 
+        gap: 1rem !important;
+    }
+}
