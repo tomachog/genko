@@ -336,3 +336,49 @@ a{
         }
     }
 }
+
+.card-login{
+    @include glass-card;
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $color-primary, transparent);
+    }
+
+    h1{
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: $color-text-white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    p{
+        color: $color-text-gray;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+
+        a{
+            color: $color-text-white;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 5px;
+
+            &:hover{
+                color: $color-primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
