@@ -1,0 +1,30 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+.section-reg{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    > p:last-child{
+        margin-top: 2rem;
+        margin-bottom: 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1); // Separador sutil
+        padding-top: 1.5rem;
+        
+        a{
+            color: $color-text-white;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 5px;
+
+            &:hover{
+                color: $color-primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}

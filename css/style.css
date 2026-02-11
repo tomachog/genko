@@ -28,6 +28,16 @@ a {
   color: inherit;
 }
 
+.main-login,
+.main-reg {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top right, #1a1a1a, #0a0a0a);
+  min-height: 100vh;
+  width: 100%;
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -607,6 +617,158 @@ a:hover::after {
 .card-login > p:last-child a:hover {
   color: #FF007F;
   text-decoration: underline;
+}
+
+.div-reg {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(30, 30, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.div-reg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF007F, transparent);
+}
+.div-reg h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.div-reg p {
+  color: #BDBDBD;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+.div-reg form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.div-reg form .grupos-form {
+  text-align: left;
+}
+.div-reg form .grupos-form label {
+  display: block;
+  font-size: 0.85rem;
+  color: #BDBDBD;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+.div-reg form .grupos-form label input[type=text],
+.div-reg form .grupos-form label input[type=email],
+.div-reg form .grupos-form label input[type=password] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.div-reg form .grupos-form label input[type=text]::placeholder,
+.div-reg form .grupos-form label input[type=email]::placeholder,
+.div-reg form .grupos-form label input[type=password]::placeholder {
+  color: rgba(189, 189, 189, 0.5);
+}
+.div-reg form .grupos-form label input[type=text]:focus,
+.div-reg form .grupos-form label input[type=email]:focus,
+.div-reg form .grupos-form label input[type=password]:focus {
+  border-color: #FF007F;
+  box-shadow: 0 0 0 3px rgba(255, 0, 127, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.div-reg form .grupos-form:has(input[type=checkbox]) label {
+  display: flex;
+  align-items: flex-start;
+  text-transform: none;
+  cursor: pointer;
+  font-weight: 500;
+  gap: 10px;
+}
+.div-reg form .grupos-form:has(input[type=checkbox]) label input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-top: 2px;
+}
+.div-reg form .grupos-form:has(input[type=checkbox]) label input[type=checkbox]:checked {
+  background-color: #FF007F;
+  border-color: #FF007F;
+  box-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
+}
+.div-reg form .grupos-form:has(input[type=checkbox]) label input[type=checkbox]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+}
+.div-reg form .grupos-form:has(input[type=checkbox]) label span {
+  font-size: 0.85rem;
+  color: #BDBDBD;
+  line-height: 1.4;
+}
+.div-reg form .grupos-form:has(input[type=checkbox]) label span a {
+  color: #FF007F;
+  text-decoration: none;
+  font-weight: 700;
+}
+.div-reg form .grupos-form:has(input[type=checkbox]) label span a:hover {
+  text-decoration: underline;
+}
+.div-reg form button[type=submit] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #FF007F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.div-reg form button[type=submit]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+  filter: brightness(1.1);
 }
 
 .anuncios-main {
@@ -1937,6 +2099,30 @@ main {
   margin: 3rem 0 2rem 0;
   position: relative;
   text-align: center;
+}
+
+.section-reg {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.section-reg > p:last-child {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+.section-reg > p:last-child a {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.section-reg > p:last-child a:hover {
+  color: #FF007F;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
