@@ -10,20 +10,225 @@
     justify-content: center;
 }
 
-.section-login{
+.section-login {
     width: 100%;
     padding: 20px;
     display: flex;
     justify-content: center;
 }
 
-.div-login{
+.div-login {
     width: 100%;
     max-width: 420px;
 }
 
-.social-login{
-    margin: 3rem 0 2rem 0;
-    position: relative;
+.card-login {
+    @include glass-card;
+    padding: 2.5rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $color-primary, transparent);
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: $color-text-white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .grupos-forms {
+            text-align: left;
+            background: transparent !important;
+            border: none !important;
+
+            label {
+                display: block;
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $color-text-gray;
+                margin-bottom: 0.5rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                background: transparent !important;
+
+                input[type="email"],
+                input[type="password"] {
+                    @include input-field;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            &:has(a) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.85rem;
+                padding: 0 !important; 
+                background: transparent !important;
+                border: none !important;
+
+                label {
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    text-transform: none;
+                    font-weight: 500;
+                    cursor: pointer;
+                    background: transparent !important;
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        width: 16px;
+                        height: 16px;
+                        border: 1px solid $color-text-gray;
+                        border-radius: 4px;
+                        background: transparent;
+                        cursor: pointer;
+                        position: relative;
+                        margin: 0; 
+
+                        &:checked {
+                            background-color: $color-primary;
+                            border-color: $color-primary;
+                            &::after {
+                                content: '✔';
+                                position: absolute;
+                                top: 50%; left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: white;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    color: $color-primary;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: color 0.2s;
+                    background: transparent !important;
+                    border: none !important;
+                    padding: 0 !important;
+                    display: inline !important;
+                    box-shadow: none !important;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: lighten($color-primary, 10%);
+                        transform: none !important;
+                        background: transparent !important;
+                    }
+                }
+            }
+        }
+
+        button[type="submit"] {
+            @include btn-style($color-primary, $color-text-white);
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            border: none;
+            
+            &:hover {
+                box-shadow: 0 0 20px rgba($color-primary, 0.4);
+            }
+        }
+    }
+
+    .social-login {
+        margin: 3rem 0 2rem 0;
+        position: relative;
+        text-align: center;
+        
+        span {
+            padding: 0 10px;
+            color: $color-text-gray;
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 0; right: 0;
+            height: 1px;
+            z-index: 0;
+        }
+
+        .btn-social {
+            width: 100%;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0.8rem;
+            background-color: transparent;
+            border-radius: 8px;
+            color: $color-text-white;
+            font-family: $font-stack;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &::before {
+                content: 'Google';
+                font-family: serif;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+                border-color: $color-text-white;
+            }
+        }
+    }
+
+    > p:last-child {
+        margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+        background: transparent !important;
+        border: none !important;
+        color: $color-text-gray;
+        font-size: 0.95rem;
+
+        a {
+            color: $color-text-white;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 5px;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            display: inline !important;
+            
+            &:hover {
+                color: $color-primary;
+                text-decoration: underline;
+                background: transparent !important;
+            }
+        }
+    }
 }

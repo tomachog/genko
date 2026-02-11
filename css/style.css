@@ -623,9 +623,9 @@ a:hover::after {
   width: 100%;
   max-width: 450px;
   background: rgba(30, 30, 30, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 16px;
   padding: 2.5rem;
@@ -661,20 +661,21 @@ a:hover::after {
   flex-direction: column;
   gap: 1.2rem;
 }
-.div-reg form .grupos-form {
+.div-reg form .grupos-forms {
   text-align: left;
 }
-.div-reg form .grupos-form label {
+.div-reg form .grupos-forms label {
   display: block;
   font-size: 0.85rem;
+  font-weight: 700;
   color: #BDBDBD;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
 }
-.div-reg form .grupos-form label input[type=text],
-.div-reg form .grupos-form label input[type=email],
-.div-reg form .grupos-form label input[type=password] {
+.div-reg form .grupos-forms label input[type=text],
+.div-reg form .grupos-forms label input[type=email],
+.div-reg form .grupos-forms label input[type=password] {
   width: 100%;
   padding: 12px 16px;
   margin-top: 0.5rem;
@@ -687,43 +688,49 @@ a:hover::after {
   outline: none;
   transition: all 0.3s ease;
 }
-.div-reg form .grupos-form label input[type=text]::placeholder,
-.div-reg form .grupos-form label input[type=email]::placeholder,
-.div-reg form .grupos-form label input[type=password]::placeholder {
+.div-reg form .grupos-forms label input[type=text]::placeholder,
+.div-reg form .grupos-forms label input[type=email]::placeholder,
+.div-reg form .grupos-forms label input[type=password]::placeholder {
   color: rgba(189, 189, 189, 0.5);
 }
-.div-reg form .grupos-form label input[type=text]:focus,
-.div-reg form .grupos-form label input[type=email]:focus,
-.div-reg form .grupos-form label input[type=password]:focus {
+.div-reg form .grupos-forms label input[type=text]:focus,
+.div-reg form .grupos-forms label input[type=email]:focus,
+.div-reg form .grupos-forms label input[type=password]:focus {
   border-color: #FF007F;
   box-shadow: 0 0 0 3px rgba(255, 0, 127, 0.2);
   background-color: rgba(0, 0, 0, 0.5);
 }
-.div-reg form .grupos-form:has(input[type=checkbox]) label {
+.div-reg form .grupos-forms:has(input[type=checkbox]) {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.div-reg form .grupos-forms:has(input[type=checkbox]) label {
   display: flex;
   align-items: flex-start;
-  text-transform: none;
+  gap: 12px;
   cursor: pointer;
-  font-weight: 500;
-  gap: 10px;
+  text-transform: none;
+  background: transparent !important;
 }
-.div-reg form .grupos-form:has(input[type=checkbox]) label input[type=checkbox] {
+.div-reg form .grupos-forms:has(input[type=checkbox]) label input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   min-width: 18px;
   height: 18px;
+  border: 1px solid #BDBDBD;
   border-radius: 4px;
   background: transparent;
-  cursor: pointer;
+  margin-top: 3px;
   position: relative;
-  margin-top: 2px;
+  flex-shrink: 0;
 }
-.div-reg form .grupos-form:has(input[type=checkbox]) label input[type=checkbox]:checked {
+.div-reg form .grupos-forms:has(input[type=checkbox]) label input[type=checkbox]:checked {
   background-color: #FF007F;
   border-color: #FF007F;
   box-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
 }
-.div-reg form .grupos-form:has(input[type=checkbox]) label input[type=checkbox]:checked::after {
+.div-reg form .grupos-forms:has(input[type=checkbox]) label input[type=checkbox]:checked::after {
   content: "✔";
   position: absolute;
   top: 50%;
@@ -733,18 +740,26 @@ a:hover::after {
   font-size: 10px;
   font-weight: 900;
 }
-.div-reg form .grupos-form:has(input[type=checkbox]) label span {
-  font-size: 0.85rem;
+.div-reg form .grupos-forms:has(input[type=checkbox]) label span {
+  font-size: 0.9rem;
   color: #BDBDBD;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-weight: 500;
 }
-.div-reg form .grupos-form:has(input[type=checkbox]) label span a {
-  color: #FF007F;
-  text-decoration: none;
+.div-reg form .grupos-forms:has(input[type=checkbox]) label span a {
+  color: #FF007F !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
   font-weight: 700;
+  text-decoration: none;
+  display: inline;
 }
-.div-reg form .grupos-form:has(input[type=checkbox]) label span a:hover {
+.div-reg form .grupos-forms:has(input[type=checkbox]) label span a:hover {
   text-decoration: underline;
+  color: rgb(255, 51, 152.6) !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 .div-reg form button[type=submit] {
   display: inline-flex;
@@ -769,6 +784,28 @@ a:hover::after {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
   filter: brightness(1.1);
+}
+.div-reg > p:last-child {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #BDBDBD;
+  background: transparent !important;
+}
+.div-reg > p:last-child a {
+  color: #FFFFFF !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+  display: inline;
+}
+.div-reg > p:last-child a:hover {
+  color: #FF007F !important;
+  text-decoration: underline;
+  background: transparent !important;
 }
 
 .anuncios-main {
@@ -1077,97 +1114,6 @@ input[type=submit]:hover {
 }
 .check-item:hover input {
   border-color: #FF007F;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-form .grupos-forms {
-  text-align: left;
-}
-form .grupos-forms label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #BDBDBD;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-form .grupos-forms label input[type=email],
-form .grupos-forms label input[type=password] {
-  width: 100%;
-  padding: 12px 16px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-}
-form .grupos-forms label input[type=email]::placeholder,
-form .grupos-forms label input[type=password]::placeholder {
-  color: rgba(189, 189, 189, 0.6);
-}
-form .grupos-forms label input[type=email]:focus,
-form .grupos-forms label input[type=password]:focus {
-  border-color: #FF007F;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-form .grupos-forms label input[type=email],
-form .grupos-forms label input[type=password] {
-  margin-top: 0.5rem;
-}
-form .grupos-forms:nth-child(3) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.85rem;
-}
-form .grupos-forms:nth-child(3) label {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-transform: none;
-  font-weight: 500;
-  cursor: pointer;
-}
-form .grupos-forms:nth-child(3) label input[type=checkbox] {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #BDBDBD;
-  border-radius: 4px;
-  background: transparent;
-  cursor: pointer;
-  position: relative;
-}
-form .grupos-forms:nth-child(3) label input[type=checkbox]:checked {
-  background-color: #FF007F;
-  border-color: #FF007F;
-}
-form .grupos-forms:nth-child(3) label input[type=checkbox]:checked::after {
-  content: "✔";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 10px;
-}
-form .grupos-forms:nth-child(3) a {
-  color: #FF007F;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-form .grupos-forms:nth-child(3) a:hover {
-  text-decoration: underline;
-  color: rgb(255, 51, 152.6);
 }
 
 .div-rank:nth-of-type(1) {
@@ -2095,10 +2041,250 @@ main {
   max-width: 420px;
 }
 
-.social-login {
+.card-login {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.card-login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF007F, transparent);
+}
+.card-login h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card-login form .grupos-forms {
+  text-align: left;
+  background: transparent !important;
+  border: none !important;
+}
+.card-login form .grupos-forms label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #BDBDBD;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent !important;
+}
+.card-login form .grupos-forms label input[type=email],
+.card-login form .grupos-forms label input[type=password] {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.card-login form .grupos-forms label input[type=email]::placeholder,
+.card-login form .grupos-forms label input[type=password]::placeholder {
+  color: rgba(189, 189, 189, 0.6);
+}
+.card-login form .grupos-forms label input[type=email]:focus,
+.card-login form .grupos-forms label input[type=password]:focus {
+  border-color: #FF007F;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.card-login form .grupos-forms label input[type=email],
+.card-login form .grupos-forms label input[type=password] {
+  margin-top: 0.5rem;
+}
+.card-login form .grupos-forms:has(a) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+.card-login form .grupos-forms:has(a) label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: none;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent !important;
+}
+.card-login form .grupos-forms:has(a) label input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+.card-login form .grupos-forms:has(a) label input[type=checkbox]:checked {
+  background-color: #FF007F;
+  border-color: #FF007F;
+}
+.card-login form .grupos-forms:has(a) label input[type=checkbox]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10px;
+}
+.card-login form .grupos-forms:has(a) a {
+  color: #FF007F;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
+  box-shadow: none !important;
+}
+.card-login form .grupos-forms:has(a) a:hover {
+  text-decoration: underline;
+  color: rgb(255, 51, 152.6);
+  transform: none !important;
+  background: transparent !important;
+}
+.card-login form button[type=submit] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 0.5rem 1.2rem;
+  margin: 0;
+  background-color: #FF007F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card-login form button[type=submit]:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+.card-login form button[type=submit] {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border: none;
+}
+.card-login form button[type=submit]:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+}
+.card-login .social-login {
   margin: 3rem 0 2rem 0;
   position: relative;
   text-align: center;
+}
+.card-login .social-login span {
+  padding: 0 10px;
+  color: #BDBDBD;
+  font-size: 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+.card-login .social-login::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 0;
+}
+.card-login .social-login .btn-social {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.8rem;
+  background-color: transparent;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card-login .social-login .btn-social::before {
+  content: "Google";
+  font-family: serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.card-login .social-login .btn-social:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #FFFFFF;
+}
+.card-login > p:last-child {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+  background: transparent !important;
+  border: none !important;
+  color: #BDBDBD;
+  font-size: 0.95rem;
+}
+.card-login > p:last-child a {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
+}
+.card-login > p:last-child a:hover {
+  color: #FF007F;
+  text-decoration: underline;
+  background: transparent !important;
 }
 
 .section-reg {
