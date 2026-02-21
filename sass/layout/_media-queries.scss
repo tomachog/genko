@@ -92,10 +92,10 @@
 
 
     .carousel-item .cta-overlay {
-        bottom: 10%; 
+        bottom: 5%; 
         .btn-crear {
-            padding: 0.6rem 1.5rem;
-            font-size: 0.9rem;
+            padding: 3px 7px;
+            font-size: 0.5rem;
         }
     }
 
@@ -293,7 +293,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .intro-orig {
         h1 { font-size: 2rem; }
         p { font-size: 1rem; }
@@ -303,21 +303,30 @@
         font-size: 1.5rem;
     }
 
-    
+
     .div-item {
-        flex-direction: column;
+        flex-direction: column !important; 
     }
 
     .div-item-img {
-        width: 100%;
-        height: 250px; 
+        width: 0% !important;
+        height: auto;
+        max-height: 300px;
         aspect-ratio: auto;
     }
 
     .orig-info {
         padding: 1.5rem;
+        width: 100%;
         
         h3 { font-size: 1.5rem; }
+        
+
+        a {
+            width: 100%;
+            text-align: center;
+            align-self: stretch;
+        }
     }
 }
 
