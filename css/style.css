@@ -2033,6 +2033,43 @@ main {
     gap: 1rem !important;
   }
 }
+@media (max-width: 768px) {
+  .intro-orig h1 {
+    font-size: 2rem;
+  }
+  .intro-orig p {
+    font-size: 1rem;
+  }
+  .section-orig h2 {
+    font-size: 1.5rem;
+  }
+  .div-item {
+    flex-direction: column;
+  }
+  .div-item-img {
+    width: 100%;
+    height: 250px;
+    aspect-ratio: auto;
+  }
+  .orig-info {
+    padding: 1.5rem;
+  }
+  .orig-info h3 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-cate h1 {
+    font-size: 2rem;
+  }
+  .section-cate p {
+    font-size: 0.95rem;
+  }
+  .div-cate {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+    gap: 1rem !important;
+  }
+}
 .main-login {
   background: radial-gradient(circle at top right, #1a1a1a, #0a0a0a);
   min-height: 100vh;
